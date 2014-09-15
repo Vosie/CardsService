@@ -1,0 +1,10 @@
+# Use PHP5 Single php.ini as default
+AddHandler application/x-httpd-php5s .php
+
+SetEnv no-gzip 1
+
+RewriteEngine On
+# rewrite for animals
+RewriteRule ^wikicards/([0-9a-z\-A-Z]{2,})/animals/([0-9a-zA-Z\-_]+)\.json$ get/dump.php?c=animals&l=$1&t=$2 [QSA,L]
+# rewrite for country
+RewriteRule ^wikicards/([0-9a-z\-A-Z]{2,})/country/([0-9a-zA-Z\-_]+)\.json$ get/dump.php?c=country&l=$1&t=$2 [QSA,L]
