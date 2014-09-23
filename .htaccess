@@ -8,3 +8,8 @@ RewriteEngine On
 RewriteRule ^wikicards/([0-9a-z\-A-Z]{2,})/animals/([0-9a-zA-Z\-_]+)\.json$ get/dump.php?c=animals&l=$1&t=$2 [QSA,L]
 # rewrite for country
 RewriteRule ^wikicards/([0-9a-z\-A-Z]{2,})/country/([0-9a-zA-Z\-_]+)\.json$ get/dump.php?c=country&l=$1&t=$2 [QSA,L]
+
+# rewrite for animals pronunciations
+RewriteRule ^wikicards/([0-9a-z\-A-Z]{2,})/animals/([0-9a-zA-Z\-_]+)\.mp3$ get/dump_pronunciation.php?c=animals&l=$1&t=$2 [QSA,L]
+# rewrite for country pronunciations
+RewriteRule ^wikicards/([0-9a-z\-A-Z]{2,})/country/([0-9a-zA-Z\-_]+)\.mp3$ get/dump_pronunciation.php?c=country&l=$1&t=$2 [QSA,L]

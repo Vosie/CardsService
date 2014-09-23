@@ -5,7 +5,7 @@ if (!isset($_GET["c"]) || !isset($_GET["l"]) || !isset($_GET["t"])) {
   exit();
 }
 
-require_once 'db.php';
+require_once '../lib/db.php';
 
 $content = getCache($_GET["c"], $_GET["l"], $_GET["t"]);
 
